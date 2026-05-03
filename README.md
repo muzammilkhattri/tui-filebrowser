@@ -21,8 +21,8 @@ A terminal file manager built with Rust and [ratatui](https://github.com/ratatui
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/tui-fm.git
-cd tui-fm
+git clone https://github.com/muzammilkhattri/tui-filebrowser.git
+cd tui-filebrowser
 cargo build --release
 ```
 
