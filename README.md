@@ -14,29 +14,54 @@ A terminal file manager built with Rust and [ratatui](https://github.com/ratatui
 - File size display with human-readable formatting
 - Directories sorted first, then alphabetical
 
-## Prerequisites
-
-- [Rust](https://www.rust-lang.org/tools/install) (1.74 or later)
-
 ## Installation
+
+### Download pre-built binary (no Rust required)
+
+Download the latest binary for your platform from [Releases](https://github.com/muzammilkhattri/tui-filebrowser/releases).
+
+| Platform | Binary |
+|----------|--------|
+| Linux (x64) | `tui-fm-linux-amd64` |
+| Linux (ARM64) | `tui-fm-linux-arm64` |
+| macOS (Intel) | `tui-fm-macos-amd64` |
+| macOS (Apple Silicon) | `tui-fm-macos-arm64` |
+| Windows (x64) | `tui-fm-windows-amd64.exe` |
+
+```bash
+# Example: macOS Apple Silicon
+chmod +x tui-fm-macos-arm64
+mv tui-fm-macos-arm64 /usr/local/bin/tui-fm
+```
+
+### Build from source
+
+Requires [Rust](https://www.rust-lang.org/tools/install) (1.74 or later).
 
 ```bash
 git clone https://github.com/muzammilkhattri/tui-filebrowser.git
 cd tui-filebrowser
 cargo build --release
+cargo install --path .
 ```
-
-The binary will be at `target/release/tui-fm`.
 
 ## Usage
 
 ```bash
-# Run from project directory
-cargo run
+# Build the project
+cargo build --release
 
-# Or run the built binary directly
-./target/release/tui-fm
+# Run the file manager
+cargo run --release
 ```
+
+To install system-wide:
+
+```bash
+cargo install --path .
+```
+
+Then run `tui-fm` from anywhere.
 
 ## Keybindings
 
